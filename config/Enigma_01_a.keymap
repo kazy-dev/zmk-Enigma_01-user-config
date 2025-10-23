@@ -163,6 +163,20 @@
             #binding-cells = <0>;
             bindings = <&lt_to_0 4 GRAVE>;
         };
+
+        tp5: shft_gui_JH {
+            compatible = "zmk,behavior-tap-dance";
+            label = "shft_gui_JH";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(J))>, <&kp LS(LG(H))>;
+        };
+
+        volume_up_down: behavior_sensor_rotate_volume_u {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "VOLUME_UP_DOWN";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOLUME_DOWN>;
+        };
     };
 
     combos {
@@ -179,23 +193,23 @@
 
         Default_JIS {
             bindings = <
-       &tp3          &tp4
-&tp1   &kp W         &kp E         &kp R        &kp T          &kp Y    &kp U        &kp I      &kp O    &kp P
-&kp A  &kp S         &kp D         &kp F        &kp G          &kp H    &kp J        &kp K      &kp L    &kp MINUS
-&kp Z  &kp X         &kp C         &kp V        &kp B          &kp N    &kp M        &kp COMMA  &kp DOT  &kp SLASH
-&tp2   &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE  &kp BACKSPACE  &kp DEL  &lt 2 ENTER  &kp RALT   &tp2     &kp LS(INTERNATIONAL_1)
+              &none      &none
+&kp Q         &kp W      &kp E         &kp R        &kp T  &kp Y      &kp U            &kp I            &kp O    &kp P
+&kp A         &kp S      &kp D         &kp F        &kp G  &kp H      &kp J            &kp K            &kp L    &kp ENTER
+&kp Z         &kp X      &kp C         &kp V        &kp B  &kp N      &kp M            &kp COMMA        &kp DOT  &kp SLASH
+&kp LEFT_ALT  &kp LCTRL  &kp LEFT_GUI  &lt 1 LANG1  &tp5   &kp SPACE  &lt 2 BACKSPACE  &kp RIGHT_SHIFT  &mo 4    &lt 3 ESCAPE
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&volume_up_down>;
         };
 
         Ctrl+_Num_ {
             bindings = <
-           &trans     &trans
-&none      &none      &none      &none      &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS    &kp PRINTSCREEN
-&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS     &kp DELETE
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UP_ARROW    &kp KP_DOT
-&trans     &trans     &trans     &trans     &trans           &trans           &trans           &kp LEFT         &kp DOWN_ARROW  &kp RIGHT_ARROW
+                &trans        &trans
+&kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6     &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0
+&kp LCTRL       &kp LC(LEFT)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &none         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp SEMICOLON
+&kp LEFT_SHIFT  &none         &none             &none          &none         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UP_ARROW  &kp GRAVE
+&trans          &trans        &trans            &trans         &trans        &trans           &trans           &trans           &trans        &trans
             >;
 
             sensor-bindings = <&arrow_left_right>;
@@ -204,10 +218,10 @@
         Shift+_Mouse_ {
             bindings = <
                   &trans            &trans
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)
-&kp F1            &kp F2            &kp F3            &kp F4            &kp F5            &kp F6            &kp F7            &kp F8            &kp F9            &kp F10
-&kp F11           &kp F12           &none             &none             &none             &none             &none             &mkp MB1          &mmv MOVE_UP      &mkp MB2
-&trans            &trans            &trans            &trans            &trans            &trans            &trans            &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)      &kp LS(NUMBER_9)       &kp LS(NUMBER_0)
+&kp LCTRL         &kp F5            &kp F6            &kp F7            &kp F8            &kp MINUS         &kp EQUAL         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT
+&kp LEFT_SHIFT    &kp F9            &kp F10           &kp F11           &kp F12           &kp LS(MINUS)     &kp LS(EQUAL)     &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp NON_US_BACKSLASH
+&trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans                &trans                 &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -215,11 +229,11 @@
 
         setting {
             bindings = <
-              &bt BT_CLR    &bt BT_CLR_ALL
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none
-&none         &none         &none           &none         &none         &none  &none  &none  &none  &none
-&none         &none         &none           &none         &none         &none  &none  &none  &none  &none
-&bootloader   &none         &none           &none         &none         &none  &none  &none  &none  &none
+                &trans  &trans
+&kp TAB         &none   &none   &none                 &none   &none   &none           &kp UP_ARROW  &kp RIGHT  &none
+&kp LCTRL       &none   &none   &kp LS(LG(NUMBER_6))  &none   &none   &kp LEFT_ARROW  &kp DOWN      &none      &none
+&kp LEFT_SHIFT  &none   &none   &kp LS(LG(NUMBER_4))  &none   &none   &kp F1          &kp F2        &kp F3     &kp F4
+&trans          &trans  &trans  &trans                &trans  &trans  &trans          &trans        &trans     &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -227,11 +241,11 @@
 
         to_ALT {
             bindings = <
-       &kp LS(TAB)  &kp TAB
-&none  &none        &none    &kp F4  &none  &none  &none  &none     &kp PAGE_UP    &none
-&none  &none        &none    &none   &none  &none  &none  &none     &kp PAGE_DOWN  &none
-&none  &none        &none    &none   &none  &none  &none  &none     &kp UP         &none
-&none  &none        &none    &none   &none  &none  &none  &kp LEFT  &kp DOWN       &kp RIGHT
+              &bt BT_CLR    &bt BT_CLR_ALL
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &none   &none   &none   &none   &bootloader
+&none         &none         &none           &none         &none         &none   &none   &none   &none   &none
+&none         &none         &none           &none         &none         &none   &none   &none   &none   &none
+&trans        &trans        &trans          &trans        &trans        &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
