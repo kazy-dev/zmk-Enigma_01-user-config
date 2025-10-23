@@ -61,20 +61,20 @@ layers:
   - Ctl+UP ARROW
   - Ctl+RIGHT
   - ''
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP PLUS
+  - ''
+  - ''
+  - ''
+  - ''
   - ;
   - LEFT SHIFT
   - ''
   - ''
   - ''
   - ''
-  - KP 1
-  - KP 2
-  - KP 3
-  - UP ARROW
+  - ''
+  - ''
+  - ''
+  - ''
   - '`'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
