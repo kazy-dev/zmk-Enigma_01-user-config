@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: Enigma_01_a}
 layers:
   Default_JIS:
-  - Sft+Gui+P
+  - Sft+Gui+,
   - '&tp6'
   - Q
   - W
