@@ -1,9 +1,9 @@
 layout: {zmk_keyboard: Enigma_01_a}
 layers:
   Default_JIS:
-  - '&tp3'
-  - '&tp4'
-  - '&tp1'
+  - ''
+  - ''
+  - Q
   - W
   - E
   - R
@@ -22,7 +22,7 @@ layers:
   - J
   - K
   - L
-  - '-'
+  - ENTER
   - Z
   - X
   - C
@@ -33,49 +33,49 @@ layers:
   - ','
   - .
   - /
-  - '&tp2'
-  - LEFT WIN
   - LEFT ALT
-  - {t: SPACE, h: Ctrl+_Num_}
-  - BACKSPACE
-  - DEL
-  - {t: ENTER, h: Shift+_Mouse_}
-  - RALT
-  - '&tp2'
-  - Sft+INTERNATIONAL 1
+  - LCTRL
+  - LEFT GUI
+  - {t: LANG1, h: Ctrl+_Num_}
+  - '&tp5'
+  - SPACE
+  - {t: BACKSPACE, h: Shift+_Mouse_}
+  - RIGHT SHIFT
+  - to_ALT
+  - {t: ESCAPE, h: setting}
   Ctrl+_Num_:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP MINUS
-  - PRINTSCREEN
-  - Ctl+A
-  - Ctl+S
-  - Ctl+D
-  - Ctl+F
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - LCTRL
+  - Ctl+LEFT
+  - Ctl+UP ARROW
+  - Ctl+RIGHT
   - ''
   - KP 4
   - KP 5
   - KP 6
   - KP PLUS
-  - DELETE
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - KP 0
+  - ;
+  - LEFT SHIFT
+  - ''
+  - ''
+  - ''
+  - ''
   - KP 1
   - KP 2
   - KP 3
   - UP ARROW
-  - KP DOT
+  - '`'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -83,9 +83,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LEFT
-  - DOWN ARROW
-  - RIGHT ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Shift+_Mouse_:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -99,26 +99,26 @@ layers:
   - Sft+8
   - Sft+9
   - Sft+0
-  - F1
-  - F2
-  - F3
-  - F4
+  - LCTRL
   - F5
   - F6
   - F7
   - F8
+  - '-'
+  - '='
+  - '['
+  - ']'
+  - ''''
+  - LEFT SHIFT
   - F9
   - F10
   - F11
   - F12
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&mkp MB1'
-  - '&mmv MOVE_UP'
-  - '&mkp MB2'
+  - Sft+-
+  - Sft+=
+  - Sft+[
+  - Sft+]
+  - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -126,10 +126,53 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   setting:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - TAB
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - UP ARROW
+  - RIGHT
+  - ''
+  - LCTRL
+  - ''
+  - ''
+  - Sft+Gui+6
+  - ''
+  - ''
+  - LEFT ARROW
+  - DOWN
+  - ''
+  - ''
+  - LEFT SHIFT
+  - ''
+  - ''
+  - Sft+Gui+4
+  - ''
+  - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  to_ALT:
   - BT CLR
   - BT CLR ALL
   - {t: BT, h: '0'}
@@ -141,39 +184,37 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - '&bootloader'
   - ''
   - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  to_ALT: [Sft+TAB, TAB, '', '', '', F4, '', '', '', '', PAGE UP, '', '', '', '', '', '', '', '', '', PAGE DOWN, '', '', '', '', '', '', '', '', '', UP, '', '', '',
-    '', '', '', '', '', LEFT, DOWN, RIGHT]
+  - {t: ▽, type: trans}
 combos:
 - p: [36, 35]
   k: setting
