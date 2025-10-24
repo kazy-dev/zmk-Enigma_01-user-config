@@ -177,7 +177,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "VOLUME_UP_DOWN";
             #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOL_UP>, <&kp C_VOLUME_DOWN>;
+            bindings = <&kp C_VOLUME_DOWN>, <&kp C_VOLUME_UP>;
         };
 
         tp6: tap_dance_shift_gui_4_5 {
