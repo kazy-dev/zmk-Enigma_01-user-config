@@ -188,14 +188,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        mo_setting {
-            bindings = <&mo 3>;
-            key-positions = <36 35>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -245,7 +238,7 @@
 &trans          &trans  &trans  &trans                &trans  &trans  &trans          &trans        &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&arrow_left_right>;
         };
 
         to_ALT {
