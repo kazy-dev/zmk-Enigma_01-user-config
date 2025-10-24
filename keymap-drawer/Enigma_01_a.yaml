@@ -215,6 +215,3 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-combos:
-- p: [36, 35]
-  k: setting
