@@ -2,10 +2,20 @@ manifest:
   remotes:
     - name: nazuna293
       url-base: https://github.com/nazuna293
+    - name: kazy-dev
+      url-base: https://github.com/kazy-dev
   projects:
+    # 改造版（今のレイヤーと押したキーを送る）。ZMK が取り込む上流の版の代わりに使う
+    - name: zmk-studio-messages
+      remote: kazy-dev
+      revision: live-state
+      path: modules/msgs/zmk-studio-messages
     - name: zmk-keyboard-Enigma_01
       remote: nazuna293
       revision: v1.0
-      import: config/west.yml
+      import:
+        file: config/west.yml
+        name-blocklist:
+          - zmk-studio-messages # 上流の版を使わない
   self:
     path: config
